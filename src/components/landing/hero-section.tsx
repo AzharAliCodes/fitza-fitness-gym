@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from 'next/image';
@@ -22,9 +23,9 @@ export function HeroSection() {
         <p className="text-lg md:text-xl mb-8 leading-relaxed animate-fade-in-up animation-delay-300">
           At Vitality Landing, we're dedicated to helping you achieve your weight loss goals through personalized training, cutting-edge programs, and a supportive community. Start your journey to a healthier, happier you today.
         </p>
-        <Button 
-          size="lg" 
-          className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 animate-fade-in-up animation-delay-600"
+        <Button
+          size="lg"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 animate-fade-in-up animation-delay-600"
           asChild
         >
           <Link href="#contact">Join Now</Link>
@@ -54,3 +55,4 @@ export function HeroSection() {
     </section>
   );
 }
+
