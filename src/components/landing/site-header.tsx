@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Dumbbell } from 'lucide-react';
+import { Dumbbell, Newspaper } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function SiteHeader() {
@@ -19,6 +19,12 @@ export function SiteHeader() {
           </Button>
           <Button variant="ghost" asChild>
             <Link href="#certificates">Certificates</Link>
+          </Button>
+          <Button variant="ghost" asChild>
+            <Link href="#feedback">Success Stories</Link>
+          </Button>
+          <Button variant="ghost" asChild>
+            <Link href="/blog">Blog</Link>
           </Button>
           <Button variant="ghost" asChild>
             <Link href="#contact">Contact</Link>
