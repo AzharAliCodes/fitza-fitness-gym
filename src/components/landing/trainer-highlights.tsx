@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Award, Zap, Target } from 'lucide-react';
+import { Award, Zap, Target, CheckCircle } from 'lucide-react';
 
 const trainers = [
   {
@@ -33,8 +33,12 @@ export function TrainerHighlights() {
     <section id="trainers" className="py-16 lg:py-24 bg-secondary">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-          Meet Our Expert Trainers
+          <CheckCircle className="inline-block mr-3 h-10 w-10 text-primary" />
+          Certificate Section
         </h2>
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          Our trainers are highly qualified and certified by reputable fitness organizations. We are committed to providing you with expert guidance and support.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {trainers.map((trainer, index) => (
             <Card key={index} className="flex flex-col overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
