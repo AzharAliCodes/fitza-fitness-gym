@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="relative flex min-h-screen flex-col">
+        <div id="page-top" className="relative flex min-h-screen flex-col">
           {children}
         </div>
         <Toaster />

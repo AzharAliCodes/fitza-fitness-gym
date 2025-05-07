@@ -16,8 +16,8 @@
     --secondary-foreground: 240 5.9% 10%; /* Default dark text for secondary */
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
-    --accent: 180 100% 25.1%; /* Teal #008080 */
-    --accent-foreground: 0 0% 98%; /* White for text on teal */
+    --accent: 120 45% 35%; /* Darker Green */
+    --accent-foreground: 0 0% 98%; /* White for text on darker green */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 240 5.9% 90%;
@@ -51,8 +51,8 @@
     --secondary-foreground: 0 0% 98%;
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
-    --accent: 180 100% 30%; /* Teal, slightly lighter for dark mode */
-    --accent-foreground: 0 0% 98%; /* White on teal */
+    --accent: 120 45% 45%; /* Darker Green for dark mode (slightly lighter than light mode's dark green) */
+    --accent-foreground: 0 0% 98%; /* White on darker green */
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 240 3.7% 15.9%;

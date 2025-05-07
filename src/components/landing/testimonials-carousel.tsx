@@ -50,10 +50,10 @@ const testimonials = [
 
 export function TestimonialsCarousel() {
   return (
-    <section className="py-16 lg:py-24 bg-background">
+    <section id="feedback" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-          Success Stories from Our Members
+          Feedback From Our Valued Members
         </h2>
         <Carousel 
           opts={{
@@ -62,15 +62,15 @@ export function TestimonialsCarousel() {
           }}
           plugins={[
             Autoplay({
-              delay: 7000, // Increased delay slightly for more complex content
+              delay: 7000, 
               stopOnInteraction: true,
             }),
           ]}
-          className="w-full max-w-5xl mx-auto" // Adjusted max-width for potentially wider cards
+          className="w-full max-w-5xl mx-auto"
         >
           <CarouselContent className="-ml-4">
             {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/2 xl:basis-1/3"> {/* Adjusted basis for wider cards */}
+              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/2 xl:basis-1/3">
                 <div className="p-1 h-full">
                   <Card className="h-full flex flex-col shadow-lg overflow-hidden">
                     <CardContent className="flex flex-col items-center p-6 flex-grow">
@@ -116,4 +116,3 @@ export function TestimonialsCarousel() {
     </section>
   );
 }
-

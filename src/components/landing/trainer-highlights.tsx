@@ -30,13 +30,13 @@ const trainers = [
 
 export function TrainerHighlights() {
   return (
-    <section id="trainers" className="py-16 lg:py-24 bg-secondary">
+    <section id="certificates" className="py-16 lg:py-24 bg-secondary">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-          Meet Our Expert Trainers
+          Our Industry Certifications
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Our trainers are highly qualified, certified, and passionate about helping you achieve your fitness goals. Get to know the experts who will guide you on your transformation journey.
+          Our team holds recognized certifications, ensuring you receive expert guidance. We are committed to upholding the highest standards in fitness and wellness training.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {trainers.map((trainer, index) => (
@@ -83,8 +83,8 @@ export function TrainerHighlights() {
           ))}
         </div>
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10" asChild>
-            <Link href="/trainers">View All Trainers</Link>
+          <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground" asChild>
+            <Link href="/trainers">Meet Our Certified Team</Link>
           </Button>
         </div>
       </div>
