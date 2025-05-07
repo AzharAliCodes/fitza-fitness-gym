@@ -47,7 +47,7 @@ const blogPosts = [
 
 export function BlogPreview() {
   return (
-    <section className="py-16 lg:py-24 bg-background">
+    <section id="blog" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
           Latest from Our Blog
@@ -87,7 +87,7 @@ export function BlogPreview() {
                       <p className="text-muted-foreground text-sm leading-relaxed">{post.excerpt}</p>
                     </CardContent>
                     <CardFooter className="p-6 bg-muted/50">
-                      <Button variant="link" className="text-accent p-0 h-auto" asChild>
+                      <Button variant="link" className="text-accent hover:text-accent/90 p-0 h-auto" asChild>
                         <Link href={post.link}>Read More <BookOpen className="ml-2 h-4 w-4" /></Link>
                       </Button>
                     </CardFooter>
