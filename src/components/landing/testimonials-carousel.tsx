@@ -80,20 +80,20 @@ export function TestimonialsCarousel() {
                             src={testimonial.beforeImage}
                             alt={`${testimonial.name} - Before`}
                             data-ai-hint={testimonial.beforeDataAiHint}
-                            width={100}
-                            height={100}
+                            width={150}
+                            height={150}
                             className="rounded-md border-2 border-muted object-cover aspect-square"
                           />
                           <p className="text-xs text-center text-muted-foreground mt-1">Before</p>
                         </div>
-                        <ArrowRight className="h-6 w-6 text-primary shrink-0" />
+                        <ArrowRight className="h-8 w-8 text-primary shrink-0" />
                         <div className="flex flex-col items-center">
                           <Image
                             src={testimonial.afterImage}
                             alt={`${testimonial.name} - After`}
                             data-ai-hint={testimonial.afterDataAiHint}
-                            width={100}
-                            height={100}
+                            width={150}
+                            height={150}
                             className="rounded-md border-2 border-primary object-cover aspect-square"
                           />
                           <p className="text-xs text-center text-muted-foreground mt-1">After</p>
@@ -116,3 +116,4 @@ export function TestimonialsCarousel() {
     </section>
   );
 }
+
