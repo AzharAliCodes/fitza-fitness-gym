@@ -11,7 +11,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import Autoplay from "embla-carousel-autoplay"
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowDown } from 'lucide-react';
 
 const testimonials = [
   {
@@ -66,35 +66,38 @@ export function TestimonialsCarousel() {
               stopOnInteraction: true,
             }),
           ]}
-          className="w-full max-w-3xl mx-auto" // Adjusted max-width for single item display
+          className="w-full max-w-3xl mx-auto"
         >
           <CarouselContent className="-ml-4">
             {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="pl-4 basis-full"> {/* Changed basis to full */}
+              <CarouselItem key={index} className="pl-4 basis-full">
                 <div className="p-1 h-full">
                   <Card className="h-full flex flex-col shadow-lg overflow-hidden">
                     <CardContent className="flex flex-col items-center p-6 flex-grow">
-                      <div className="flex items-center justify-center space-x-4 sm:space-x-6 mb-6 w-full"> {/* Increased space */}
+                      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-6 w-full">
                         <div className="flex flex-col items-center">
                           <Image
                             src={testimonial.beforeImage}
                             alt={`${testimonial.name} - Before`}
                             data-ai-hint={testimonial.beforeDataAiHint}
-                            width={250} // Increased image size
-                            height={250} // Increased image size
-                            className="rounded-lg border-2 border-muted object-cover aspect-square shadow-md"
+                            width={250} 
+                            height={250}
+                            className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-[250px] lg:h-[250px] rounded-lg border-2 border-muted object-cover aspect-square shadow-md"
                           />
                           <p className="text-sm text-center text-muted-foreground mt-2">Before</p>
                         </div>
-                        <ArrowRight className="h-10 w-10 sm:h-12 sm:w-12 text-primary shrink-0" /> {/* Slightly larger arrow */}
+                        
+                        <ArrowDown className="h-8 w-8 text-primary sm:hidden shrink-0" />
+                        <ArrowRight className="hidden sm:block h-8 w-8 md:h-10 md:w-10 text-primary shrink-0" />
+
                         <div className="flex flex-col items-center">
                           <Image
                             src={testimonial.afterImage}
                             alt={`${testimonial.name} - After`}
                             data-ai-hint={testimonial.afterDataAiHint}
-                            width={250} // Increased image size
-                            height={250} // Increased image size
-                            className="rounded-lg border-2 border-primary object-cover aspect-square shadow-md"
+                            width={250}
+                            height={250}
+                            className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-[250px] lg:h-[250px] rounded-lg border-2 border-primary object-cover aspect-square shadow-md"
                           />
                           <p className="text-sm text-center text-muted-foreground mt-2">After</p>
                         </div>
@@ -116,4 +119,3 @@ export function TestimonialsCarousel() {
     </section>
   );
 }
-
