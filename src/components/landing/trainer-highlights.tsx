@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -33,7 +34,7 @@ export function TrainerHighlights() {
     <section id="certificates" className="py-16 lg:py-24 bg-secondary">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-          Our Industry Certifications
+          Certifications
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           Our team holds recognized certifications, ensuring you receive expert guidance. We are committed to upholding the highest standards in fitness and wellness training.
@@ -75,7 +76,7 @@ export function TrainerHighlights() {
                 </div>
               </CardContent>
               <CardFooter className="p-6 bg-muted/50">
-                <Button variant="link" className="text-accent p-0 h-auto" asChild>
+                <Button variant="link" className="text-accent hover:text-accent/90 p-0 h-auto" asChild>
                   <Link href={`/trainers/${trainer.name.toLowerCase().replace(' ', '-')}`}>Learn More <Target className="ml-2 h-4 w-4" /></Link>
                 </Button>
               </CardFooter>
