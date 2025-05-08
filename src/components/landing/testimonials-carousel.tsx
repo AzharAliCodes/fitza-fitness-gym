@@ -55,14 +55,14 @@ export function TestimonialsCarousel() {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
           Success Stories from Our Members
         </h2>
-        <Carousel 
+        <Carousel
           opts={{
             align: "start",
             loop: true,
           }}
           plugins={[
             Autoplay({
-              delay: 7000, 
+              delay: 7000,
               stopOnInteraction: true,
             }),
           ]}
@@ -80,13 +80,13 @@ export function TestimonialsCarousel() {
                             src={testimonial.beforeImage}
                             alt={`${testimonial.name} - Before`}
                             data-ai-hint={testimonial.beforeDataAiHint}
-                            width={250} 
+                            width={250}
                             height={250}
                             className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-[250px] lg:h-[250px] rounded-lg border-2 border-muted object-cover aspect-square shadow-md"
                           />
                           <p className="text-sm text-center text-muted-foreground mt-2">Before</p>
                         </div>
-                        
+
                         <ArrowDown className="h-8 w-8 text-primary sm:hidden shrink-0" />
                         <ArrowRight className="hidden sm:block h-8 w-8 md:h-10 md:w-10 text-primary shrink-0" />
 
