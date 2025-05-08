@@ -45,9 +45,10 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="mt-10 pt-8 border-t border-primary-foreground/20 text-center text-sm opacity-70">
-          &copy; {new Date().getFullYear()} FitzaFitness. All rights reserved.
+          &copy; {new Date().getFullYear()} Azharuddin Ali. All rights reserved.
         </div>
       </div>
     </footer>
   );
 }
+
