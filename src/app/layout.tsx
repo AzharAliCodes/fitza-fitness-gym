@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Vitality Landing - Transform Your Body',
-  description: 'Join Vitality Landing, the premier weight loss gym. Expert trainers, proven programs, and a supportive community.',
+  title: 'FitzaFitness - Transform Your Body',
+  description: 'Join FitzaFitness, the premier weight loss gym. Expert trainers, proven programs, and a supportive community.',
 };
 
 export default function RootLayout({

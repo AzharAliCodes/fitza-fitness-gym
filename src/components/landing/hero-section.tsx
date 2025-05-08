@@ -21,7 +21,7 @@ export function HeroSection() {
           Transform Your Body with Expert Trainers
         </h1>
         <p className="text-lg md:text-xl mb-8 leading-relaxed animate-fade-in-up animation-delay-300">
-          At Vitality Landing, we're dedicated to helping you achieve your weight loss goals through personalized training, cutting-edge programs, and a supportive community. Start your journey to a healthier, happier you today.
+          At FitzaFitness, we're dedicated to helping you achieve your weight loss goals through personalized training, cutting-edge programs, and a supportive community. Start your journey to a healthier, happier you today.
         </p>
         <Button
           size="lg"

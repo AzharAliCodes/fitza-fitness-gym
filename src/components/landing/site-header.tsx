@@ -40,9 +40,9 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/#page-top" className="flex items-center space-x-2" aria-label="Vitality Landing Home">
+        <Link href="/#page-top" className="flex items-center space-x-2" aria-label="FitzaFitness Home">
           <Dumbbell className="h-8 w-8 text-primary" />
-          <span className="font-bold text-xl text-foreground">Vitality Landing</span>
+          <span className="font-bold text-xl text-foreground">FitzaFitness</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -72,7 +72,7 @@ export function SiteHeader() {
                 <div className="flex items-center p-4 border-b"> {/* Removed justify-between as close button is now absolute */}
                   <Link href="/#page-top" className="flex items-center space-x-2" onClick={() => handleMobileLinkClick("/#page-top")}>
                     <Dumbbell className="h-8 w-8 text-primary" />
-                    <span className="font-bold text-xl text-foreground">Vitality</span>
+                    <span className="font-bold text-xl text-foreground">Fitza</span>
                   </Link>
                   {/* The default X button from SheetContent will be used */}
                 </div>

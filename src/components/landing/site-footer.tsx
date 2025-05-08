@@ -7,9 +7,9 @@ export function SiteFooter() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           <div className="flex flex-col items-center md:items-start">
-            <Link href="/#page-top" className="flex items-center space-x-2 mb-4" aria-label="Vitality Landing Home">
+            <Link href="/#page-top" className="flex items-center space-x-2 mb-4" aria-label="FitzaFitness Home">
               <Dumbbell className="h-10 w-10" />
-              <span className="font-bold text-2xl">Vitality Landing</span>
+              <span className="font-bold text-2xl">FitzaFitness</span>
             </Link>
             <p className="text-sm text-center md:text-left opacity-80">
               Transforming bodies, empowering lives.
@@ -45,7 +45,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="mt-10 pt-8 border-t border-primary-foreground/20 text-center text-sm opacity-70">
-          &copy; {new Date().getFullYear()} Vitality Landing. All rights reserved.
+          &copy; {new Date().getFullYear()} FitzaFitness. All rights reserved.
         </div>
       </div>
     </footer>

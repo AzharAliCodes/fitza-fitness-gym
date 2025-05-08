@@ -1,3 +1,4 @@
+
 "use client"
 
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -127,7 +128,7 @@ export function ContactSection() {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 text-primary" />
-                <a href="mailto:info@vitalitylanding.com" className="hover:text-accent transition-colors">info@vitalitylanding.com</a>
+                <a href="mailto:info@fitzafitness.com" className="hover:text-accent transition-colors">info@fitzafitness.com</a>
               </li>
             </ul>
             <div className="mt-8">

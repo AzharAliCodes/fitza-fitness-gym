@@ -20,7 +20,7 @@ const testimonials = [
     afterImage: 'https://picsum.photos/250/250?random=14',
     beforeDataAiHint: 'woman overweight',
     afterDataAiHint: 'woman fit',
-    story: "I lost 30 pounds in 3 months! The trainers at Vitality Landing are amazing and kept me motivated. I've never felt better.",
+    story: "I lost 30 pounds in 3 months! The trainers at FitzaFitness are amazing and kept me motivated. I've never felt better.",
   },
   {
     name: 'John B.',
@@ -36,7 +36,7 @@ const testimonials = [
     afterImage: 'https://picsum.photos/250/250?random=16',
     beforeDataAiHint: 'person before fitness',
     afterDataAiHint: 'person after fitness',
-    story: "The community here is so supportive. I've not only lost weight but also gained a lot of confidence. Thank you, Vitality Landing!",
+    story: "The community here is so supportive. I've not only lost weight but also gained a lot of confidence. Thank you, FitzaFitness!",
   },
   {
     name: 'Mike P.',
