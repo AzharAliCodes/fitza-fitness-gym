@@ -16,32 +16,32 @@ import { ArrowRight } from 'lucide-react';
 const testimonials = [
   {
     name: 'Sarah L.',
-    beforeImage: 'https://picsum.photos/200/200?random=4',
-    afterImage: 'https://picsum.photos/200/200?random=14',
+    beforeImage: 'https://picsum.photos/250/250?random=4',
+    afterImage: 'https://picsum.photos/250/250?random=14',
     beforeDataAiHint: 'woman overweight',
     afterDataAiHint: 'woman fit',
     story: "I lost 30 pounds in 3 months! The trainers at Vitality Landing are amazing and kept me motivated. I've never felt better.",
   },
   {
     name: 'John B.',
-    beforeImage: 'https://picsum.photos/200/200?random=5',
-    afterImage: 'https://picsum.photos/200/200?random=15',
+    beforeImage: 'https://picsum.photos/250/250?random=5',
+    afterImage: 'https://picsum.photos/250/250?random=15',
     beforeDataAiHint: 'man unhealthy',
     afterDataAiHint: 'man healthy',
     story: "Joining this gym was the best decision I've made for my health. The personalized programs made all the difference. Highly recommend!",
   },
   {
     name: 'Emily K.',
-    beforeImage: 'https://picsum.photos/200/200?random=6',
-    afterImage: 'https://picsum.photos/200/200?random=16',
+    beforeImage: 'https://picsum.photos/250/250?random=6',
+    afterImage: 'https://picsum.photos/250/250?random=16',
     beforeDataAiHint: 'person before fitness',
     afterDataAiHint: 'person after fitness',
     story: "The community here is so supportive. I've not only lost weight but also gained a lot of confidence. Thank you, Vitality Landing!",
   },
   {
     name: 'Mike P.',
-    beforeImage: 'https://picsum.photos/200/200?random=7',
-    afterImage: 'https://picsum.photos/200/200?random=17',
+    beforeImage: 'https://picsum.photos/250/250?random=7',
+    afterImage: 'https://picsum.photos/250/250?random=17',
     beforeDataAiHint: 'man before transformation',
     afterDataAiHint: 'man after transformation',
     story: "I struggled with weight for years. The trainers created a realistic plan that worked for my lifestyle. I'm down 50 pounds and counting!",
@@ -53,7 +53,7 @@ export function TestimonialsCarousel() {
     <section id="feedback" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-          Feedback From Our Valued Members
+          Success Stories from Our Members
         </h2>
         <Carousel 
           opts={{
@@ -66,41 +66,41 @@ export function TestimonialsCarousel() {
               stopOnInteraction: true,
             }),
           ]}
-          className="w-full max-w-5xl mx-auto"
+          className="w-full max-w-3xl mx-auto" // Adjusted max-width for single item display
         >
           <CarouselContent className="-ml-4">
             {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/2 xl:basis-1/3">
+              <CarouselItem key={index} className="pl-4 basis-full"> {/* Changed basis to full */}
                 <div className="p-1 h-full">
                   <Card className="h-full flex flex-col shadow-lg overflow-hidden">
                     <CardContent className="flex flex-col items-center p-6 flex-grow">
-                      <div className="flex items-center justify-center space-x-3 mb-4 w-full">
+                      <div className="flex items-center justify-center space-x-4 sm:space-x-6 mb-6 w-full"> {/* Increased space */}
                         <div className="flex flex-col items-center">
                           <Image
                             src={testimonial.beforeImage}
                             alt={`${testimonial.name} - Before`}
                             data-ai-hint={testimonial.beforeDataAiHint}
-                            width={150}
-                            height={150}
-                            className="rounded-md border-2 border-muted object-cover aspect-square"
+                            width={250} // Increased image size
+                            height={250} // Increased image size
+                            className="rounded-lg border-2 border-muted object-cover aspect-square shadow-md"
                           />
-                          <p className="text-xs text-center text-muted-foreground mt-1">Before</p>
+                          <p className="text-sm text-center text-muted-foreground mt-2">Before</p>
                         </div>
-                        <ArrowRight className="h-8 w-8 text-primary shrink-0" />
+                        <ArrowRight className="h-10 w-10 sm:h-12 sm:w-12 text-primary shrink-0" /> {/* Slightly larger arrow */}
                         <div className="flex flex-col items-center">
                           <Image
                             src={testimonial.afterImage}
                             alt={`${testimonial.name} - After`}
                             data-ai-hint={testimonial.afterDataAiHint}
-                            width={150}
-                            height={150}
-                            className="rounded-md border-2 border-primary object-cover aspect-square"
+                            width={250} // Increased image size
+                            height={250} // Increased image size
+                            className="rounded-lg border-2 border-primary object-cover aspect-square shadow-md"
                           />
-                          <p className="text-xs text-center text-muted-foreground mt-1">After</p>
+                          <p className="text-sm text-center text-muted-foreground mt-2">After</p>
                         </div>
                       </div>
-                      <h3 className="text-xl font-semibold mb-2 text-foreground text-center">{testimonial.name}</h3>
-                      <p className="text-muted-foreground text-center leading-relaxed text-sm">
+                      <h3 className="text-xl md:text-2xl font-semibold mb-3 text-foreground text-center">{testimonial.name}</h3>
+                      <p className="text-muted-foreground text-center leading-relaxed text-base">
                         "{testimonial.story}"
                       </p>
                     </CardContent>
@@ -109,10 +109,11 @@ export function TestimonialsCarousel() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="text-primary hover:text-primary/80 border-primary hover:bg-primary/10" />
-          <CarouselNext className="text-primary hover:text-primary/80 border-primary hover:bg-primary/10" />
+          <CarouselPrevious className="text-primary hover:text-primary/80 border-primary hover:bg-primary/10 -left-4 sm:-left-8 md:-left-12" />
+          <CarouselNext className="text-primary hover:text-primary/80 border-primary hover:bg-primary/10 -right-4 sm:-right-8 md:-right-12" />
         </Carousel>
       </div>
     </section>
   );
 }
+
