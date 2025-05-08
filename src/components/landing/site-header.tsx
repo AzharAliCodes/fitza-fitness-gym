@@ -2,7 +2,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Dumbbell, Menu, X } from 'lucide-react';
+import { Dumbbell, Menu } from 'lucide-react'; // Removed X as it's provided by SheetContent
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { useState, useEffect } from 'react';
@@ -22,8 +22,20 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   useEffect(() => {
+    // Close mobile menu on route change
     setIsMobileMenuOpen(false);
   }, [pathname]);
+
+  // Close mobile menu if an anchor link on the same page is clicked
+  const handleMobileLinkClick = (href: string) => {
+    if (href.startsWith("/#")) {
+      setIsMobileMenuOpen(false);
+    } else {
+       // For actual page navigations, useEffect above will handle it.
+       // But to be safe for any other link types, we can also close here.
+      setIsMobileMenuOpen(false);
+    }
+  };
 
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -54,19 +66,15 @@ export function SiteHeader() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] p-0"> {/* Adjusted padding */}
               <div className="flex flex-col h-full">
-                <div className="flex justify-between items-center p-4 border-b">
-                  <Link href="/#page-top" className="flex items-center space-x-2" onClick={() => setIsMobileMenuOpen(false)}>
+                {/* SheetContent provides its own close button, so remove the custom one here */}
+                <div className="flex items-center p-4 border-b"> {/* Removed justify-between as close button is now absolute */}
+                  <Link href="/#page-top" className="flex items-center space-x-2" onClick={() => handleMobileLinkClick("/#page-top")}>
                     <Dumbbell className="h-8 w-8 text-primary" />
                     <span className="font-bold text-xl text-foreground">Vitality</span>
                   </Link>
-                  <SheetClose asChild>
-                     <Button variant="ghost" size="icon">
-                        <X className="h-6 w-6" />
-                        <span className="sr-only">Close menu</span>
-                      </Button>
-                  </SheetClose>
+                  {/* The default X button from SheetContent will be used */}
                 </div>
                 <nav className="flex flex-col space-y-2 p-4 flex-grow">
                   {navLinks.map(link => (
@@ -74,7 +82,7 @@ export function SiteHeader() {
                         <Link
                           href={link.href}
                           className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
-                          onClick={() => setIsMobileMenuOpen(false)}
+                          onClick={() => handleMobileLinkClick(link.href)}
                         >
                           {link.label}
                         </Link>
@@ -84,7 +92,7 @@ export function SiteHeader() {
                 <div className="p-4 border-t">
                   <SheetClose asChild>
                     <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
-                      <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Join Now</Link>
+                      <Link href="#contact" onClick={() => handleMobileLinkClick("#contact")}>Join Now</Link>
                     </Button>
                   </SheetClose>
                 </div>
